@@ -11,3 +11,7 @@ class TestCreatePlace:
 
         print("метод GET")
         result_get: Response = GoogleMapsApi.get_new_place(result_post.json()["place_id"])
+
+        # проверка, что запрос GET прошёл успешно
+        assert result_get.status_code == 200
+        print(f"Статус код {result_get.status_code}")
