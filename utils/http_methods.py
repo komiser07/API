@@ -15,7 +15,7 @@ class HttpMethods:
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
-        return result.json()
+        return result
 
     # создаём статический метод POST
     @staticmethod
@@ -26,7 +26,7 @@ class HttpMethods:
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
-        return result.json()
+        return result
 
     # создаём статический метод PUT
     @staticmethod
@@ -37,7 +37,7 @@ class HttpMethods:
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
-        return result.json()
+        return result
 
     # создаём статический метод DELETE
     @staticmethod
@@ -48,4 +48,4 @@ class HttpMethods:
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
-        return result.json()
+        return result
