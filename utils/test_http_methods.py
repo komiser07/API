@@ -21,7 +21,8 @@ class HttpMethods:
     @staticmethod
     def post(url, body):
         result = request.post(
-            url, json=body,
+            url,
+            json=body,
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
@@ -31,7 +32,8 @@ class HttpMethods:
     @staticmethod
     def put(url, body):
         result = request.put(
-            url, json=body,
+            url,
+            json=body,
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
         )
