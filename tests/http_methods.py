@@ -1,7 +1,7 @@
 # импортируем библиотеку request
 import request
 
-# создаём класс
+# создаём класс HttpMethods
 class HttpMethods:
     # Заголовки для HTTP запросов и куки
     headers = {'Content-Type': 'application/json'}
