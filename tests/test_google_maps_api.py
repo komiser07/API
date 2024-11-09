@@ -30,3 +30,10 @@ class TestCreatePlace:
         assert msg == "Update address operation failed, looks like the data doesn't exists"
         # assert msg == "Address successfully updated"
         print("Поле MSG корректно")
+
+        print("\nметод DELETE")
+        result_delite: Response = GoogleMapsApi.delite_new_place(result_post.json()["place_id"])
+
+        print("\nметод GET DELITE")
+        result_get: Response = GoogleMapsApi.get_new_place(result_post.json()["place_id"])
+

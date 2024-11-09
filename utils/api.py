@@ -44,16 +44,29 @@ class GoogleMapsApi:
     # добавляем метод PUT
     @staticmethod
     def put_new_place(place_id):
-        put_resourse = "/maps/api/place/update/json"
-        put_url = base_url + put_resourse + key
+        put_resource = "/maps/api/place/update/json"
+        put_url = base_url + put_resource + key
         print(put_url)
-        json_for_update_place = {
+        json_for_update_location = {
             # "place_id": place_id,
             "place_id": "c104d917f4b60e2c9a5feda6c9cbf279",
             "address": "44, Volgograd, RU",
             "key": "qaclick123"
         }
-        result_put = HttpMethods.put(put_url, json_for_update_place)
+        result_put = HttpMethods.put(put_url, json_for_update_location)
         print(result_put.text)
         return result_put
+
+    # добавляем метод DELITE
+    @staticmethod
+    def delite_new_place(place_id):
+        delite_resource = "/maps/api/place/delete/json"
+        delite_url = base_url + delite_resource + key
+        print(delite_url)
+        json_for_delite_location = {
+            "place_id": place_id
+        }
+        result_delite = HttpMethods.delete(delite_url, json_for_delite_location)
+        print(result_delite.text)
+        return result_delite
 
