@@ -13,5 +13,5 @@ class TestCreatePlace:
         result_get: Response = GoogleMapsApi.get_new_place(result_post.json()["place_id"])
 
         # проверка, что запрос GET прошёл успешно
-        assert result_get.status_code == 200
+        assert result_get.status_code == 200, " Ошибка, локация с таким place_id отсутствует"
         print(f"Статус код {result_get.status_code}")
