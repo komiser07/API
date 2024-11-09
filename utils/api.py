@@ -31,6 +31,7 @@ class GoogleMapsApi:
         print(result_post.text)
         return result_post
 
+    # метод GET
     @staticmethod
     def get_new_place(place_id):
         get_resource = "/maps/api/place/get/json"
