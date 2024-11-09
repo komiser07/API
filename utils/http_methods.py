@@ -2,9 +2,7 @@
 import requests
 
 
-# создаём класс HttpMethods
 class HttpMethods:
-    # Заголовки для HTTP запросов и куки
     headers = {'Content-Type': 'application/json'}
     cookie = ""
 
