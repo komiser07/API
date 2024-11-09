@@ -2,7 +2,7 @@ import request
 
 class HttpMethods:
     headers = {'Content-Type': 'application/json'}
-    cookie = " "
+    cookie = ""
 
     @staticmethod
     def get(url):
