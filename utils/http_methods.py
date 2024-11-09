@@ -1,5 +1,6 @@
 # импортируем библиотеку request
-import request
+import requests
+
 
 # создаём класс HttpMethods
 class HttpMethods:
@@ -10,7 +11,7 @@ class HttpMethods:
     # создаём статический метод GET
     @staticmethod
     def get(url):
-        result = request.get(
+        result = requests.get(
             url,
             headers=HttpMethods.headers,
             cookies=HttpMethods.cookie
@@ -20,7 +21,7 @@ class HttpMethods:
     # создаём статический метод POST
     @staticmethod
     def post(url, body):
-        result = request.post(
+        result = requests.post(
             url,
             json=body,
             headers=HttpMethods.headers,
@@ -31,7 +32,7 @@ class HttpMethods:
     # создаём статический метод PUT
     @staticmethod
     def put(url, body):
-        result = request.put(
+        result = requests.put(
             url,
             json=body,
             headers=HttpMethods.headers,
@@ -42,7 +43,7 @@ class HttpMethods:
     # создаём статический метод DELETE
     @staticmethod
     def delete(url, body):
-        result = request.delete(
+        result = requests.delete(
             url,
             json=body,
             headers=HttpMethods.headers,
