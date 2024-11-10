@@ -27,7 +27,7 @@ class Logger:
 
         cls.write_log_to_file(data_to_add)
 
-    # создаём метод, который добавляет в log файл строки после ответа от сервера
+    # создаём метод, который добавляет в log файл строки после ответа от сервера.
     @classmethod
     def add_response(cls, result: Response):
         headers_as_dict = dict(result.headers)
